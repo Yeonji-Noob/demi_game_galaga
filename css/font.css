@@ -1,0 +1,22 @@
+@font-face {
+  font-family: 'NeoDunggeunmo';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.3/NeoDunggeunmo.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: 'NeoDunggeunmo';
+  text-align: center;
+}
+
+h1 {text-align: center;
+  font-size: 18px;
+  line-height: 2px;
+  color: white;
+  letter-spacing: 3px;}
+
+body {width: 100%; height: 100%;
+  background-color: rgba(61, 40, 250, 0.541);
+overflow-x:hidden ;
+overflow-y:auto;}
