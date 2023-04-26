@@ -3,8 +3,8 @@
 let canvas;
 let ctx;
 
-canvas = document.createElement("canvas")
-ctx = canvas.getContext("2d")
+canvas = document.createElement("canvas");
+ctx = canvas.getContext("2d");
 
 canvas.width=400;
 canvas.height=700;
@@ -15,15 +15,15 @@ document.body.appendChild(canvas);
 // 이미지 변수 설정
 let backgroundImage,spaceshipImage,bulletImage,enemyImage,gameOverImage;
 
-let gameOver=false
+let gameOver=false;
 // true=게임이 끝남 
-let score=0
+let score=0;
 
 // 우주선 좌표
-let spaceshipX = canvas.width/2 - 34
-let spaceshipY = canvas.height - 70
+let spaceshipX = canvas.width/2 - 34;
+let spaceshipY = canvas.height - 70;
 
-let bulletList = [] //총알저장배열
+let bulletList = []; //총알저장배열
 function Bullet(){
   this.x=0;
   this.y=0;
@@ -47,26 +47,26 @@ function Bullet(){
     for(let i=0;i < enemyList.length;i++){
       if(this.y <=enemyList[i].y && this.x >= enemyList[i].x && this.x <= enemyList[i].x+36)
       {score++;
-        this.alive=false //총알주금
+        this.alive = false; //총알주금
         enemyList.splice(i,1);
       }
     }
     
-  }
+  };
 }
 
 function generateRandomValue(min,max) {
-  let randomNum = Math.floor(Math.random()*(max-min+1))+min
-  return randomNum
+  let randomNum = Math.floor(Math.random()*(max-min+1))+min;
+  return randomNum;
 }
 
-let enemyList=[]
+let enemyList=[];
 function Enemy() {
   this.x=0;
   this.y=0;
   this.init =function() {
     this.y=0
-    this.x=generateRandomValue(0,canvas.width-42)
+    this.x=generateRandomValue(0,canvas.width-42);
     enemyList.push(this);
   };
 
@@ -111,7 +111,6 @@ function setupKeyboardListener() {
   });
 }
 
-// 하나의 함수에는 하나의 역할,,,
 
 function createBullet() {
   let b = new Bullet();
@@ -120,9 +119,9 @@ function createBullet() {
 
 function createEnemy() {
   const interval = setInterval(function(){
-    let e = new Enemy()
-    e.init()
-  },1000)
+    let e = new Enemy();
+    e.init();
+  },1000);
 }
 // 시간 딜레이해서 호출해서 찍어내기
 // 단위가 ms이므로 1초하려면 1000ms
@@ -140,7 +139,7 @@ function update() {
   
   // 우주선 x값 한정시키기(밖으로안나가게)
   if (spaceshipX <= 0) {
-    spaceshipX=0
+    spaceshipX=0;
   }
   if (spaceshipX >= canvas.width-68){
     spaceshipX = 400 - 68;
@@ -161,21 +160,21 @@ function update() {
 
 function render() {
   ctx.drawImage(backgroundImage,0,0,canvas.width, canvas.height);
-  ctx.drawImage(spaceshipImage,spaceshipX,spaceshipY)
+  ctx.drawImage(spaceshipImage,spaceshipX,spaceshipY);
 
   ctx.fillText(`Score:${score}`, 20, 40);
-  ctx.fillStyle = "white"
-  ctx.font = "20px arial"
+  ctx.fillStyle = "white";
+  ctx.font = "20px arial";
 
   for(let i=0;i<bulletList.length;i++){
     if (bulletList[i].alive) {
-      ctx.drawImage(bulletImage,bulletList[i].x,bulletList[i].y)
+      ctx.drawImage(bulletImage,bulletList[i].x,bulletList[i].y);
     }
   }
 
 
   for(let i=0;i<enemyList.length;i++){
-    ctx.drawImage(enemyImage,enemyList[i].x, enemyList[i].y)
+    ctx.drawImage(enemyImage,enemyList[i].x, enemyList[i].y);
   }
 }
 
@@ -187,7 +186,7 @@ function main() {
   }
 
   else{
-    ctx.drawImage(gameOverImage, 73, 240,gameOverImage.width,gameOverImage.height)
+    ctx.drawImage(gameOverImage, 73, 240,gameOverImage.width,gameOverImage.height);
   }
 }
 
