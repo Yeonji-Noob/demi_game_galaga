@@ -24,6 +24,9 @@ let spaceshipX = canvas.width/2 - 34;
 let spaceshipY = canvas.height - 70;
 
 let bulletList = []; //총알저장배열
+
+
+
 function Bullet(){
   this.x=0;
   this.y=0;
@@ -109,6 +112,7 @@ function setupKeyboardListener() {
 
     if(event.key == ' ') {createBullet()}
   });
+
 }
 
 
@@ -190,11 +194,13 @@ function main() {
   }
 }
 
+
 // 웹사이트 시작하자마자 호출
 loadImage();
 setupKeyboardListener();
 createEnemy();
 main();
+
 
 
 
