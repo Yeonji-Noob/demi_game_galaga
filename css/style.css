@@ -83,3 +83,8 @@ h1 {
   height: 30px;
 }
 
+
+
+@media (min-width: 1280px) {
+  .control_key{ display: none }
+}

@@ -28,12 +28,13 @@ let bulletList = []; //총알저장배열
 
 
 function Bullet(){
+
   this.x=0;
   this.y=0;
   this.init=function(){
     this.x = spaceshipX+28;
     this.y = spaceshipY;
-    this.alive=true //총알 뒤지면 false
+    this.alive = true; //총알 뒤지면 false
 
     bulletList.push(this);
   };
@@ -56,7 +57,11 @@ function Bullet(){
     }
     
   };
+
+  console.log(this.checkHit.alive);
 }
+
+
 
 function generateRandomValue(min,max) {
   let randomNum = Math.floor(Math.random()*(max-min+1))+min;
@@ -102,18 +107,63 @@ function loadImage() {
 
 // 방향키 이벤트
 let keysDown={}
+
+// 터치 이벤트
+let spaceButton = document.getElementById('space');
+let leftButton = document.getElementById('left');
+let rightButton = document.getElementById('right');
+
+
+//반복되는 부분이 많아서 foreach로 refactoring 해주었었는데
+//총알이 enemy를 뚫고 지나가는 버그가 생겨서 다시 원래형태로 냅둠...
+
 function setupKeyboardListener() {
+
+
   document.addEventListener("keydown",function(event){ 
      keysDown[event.key] = true;
 
   });
+
   document.addEventListener("keyup",function(event){
     delete keysDown[event.key];
 
-    if(event.key == ' ') {createBullet()}
+    if(event.key == ' ') {
+      createBullet()
+    }
   });
 
+
+  spaceButton.addEventListener("mousedown", function() {
+    keysDown[' '] = true;
+    createBullet();
+  });
+
+
+  leftButton.addEventListener("mousedown", function() {
+    keysDown['ArrowLeft'] = true;
+  });
+
+  rightButton.addEventListener("mousedown", function() {
+    keysDown['ArrowRight'] = true;
+  });
+
+  leftButton.addEventListener("mouseup", function(){
+    delete keysDown['ArrowLeft']
+  });
+  
+  rightButton.addEventListener("mouseup", function(){
+    delete keysDown['ArrowRight']
+  });
+
+
 }
+
+
+
+
+
+
 
 
 function createBullet() {
