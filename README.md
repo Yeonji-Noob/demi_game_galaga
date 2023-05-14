@@ -1,8 +1,13 @@
 # :space_invader:demi_game_galaga:space_invader:
 
-Galaga Javascript web game
+### :rocket:Galaga Javascript web game
 
 ![galaga](https://github.com/Yeonji-Noob/demi_game_galaga/assets/121682565/3bfb096f-0ad7-4d92-be9e-2ba2e8a7f533)
+
+### mobile version
+
+![KakaoTalk_20230514_211104847](https://github.com/Yeonji-Noob/demi_game_galaga/assets/121682565/796368cb-1596-4906-a334-30cb05b0f8ac)
+
 
 ## :link:Link
 
