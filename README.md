@@ -2,11 +2,11 @@
 
 ### :rocket:Galaga Javascript web game
 
-![galaga](https://github.com/Yeonji-Noob/demi_game_galaga/assets/121682565/3bfb096f-0ad7-4d92-be9e-2ba2e8a7f533)
+![galaga_1](https://github.com/Yeonji-Noob/demi_game_galaga/assets/121682565/af3c628f-c1ee-4eb0-bf7d-7d2fabd3d4b2)
 
 ### mobile version
 
-![KakaoTalk_20230514_211104847](https://github.com/Yeonji-Noob/demi_game_galaga/assets/121682565/796368cb-1596-4906-a334-30cb05b0f8ac)
+![galaga_1_mob](https://github.com/Yeonji-Noob/demi_game_galaga/assets/121682565/e969b765-7d26-4697-899f-8be30d050bc1)
 
 
 ## :link:Link
