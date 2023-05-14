@@ -134,25 +134,25 @@ function setupKeyboardListener() {
   });
 
 
-  spaceButton.addEventListener("mousedown", function() {
+  spaceButton.addEventListener("touchstart", function() {
     keysDown[' '] = true;
     createBullet();
   });
 
 
-  leftButton.addEventListener("mousedown", function() {
+  leftButton.addEventListener("touchstart", function() {
     keysDown['ArrowLeft'] = true;
   });
 
-  rightButton.addEventListener("mousedown", function() {
+  rightButton.addEventListener("touchstart", function() {
     keysDown['ArrowRight'] = true;
   });
 
-  leftButton.addEventListener("mouseup", function(){
+  leftButton.addEventListener("touchend", function(){
     delete keysDown['ArrowLeft']
   });
   
-  rightButton.addEventListener("mouseup", function(){
+  rightButton.addEventListener("touchend", function(){
     delete keysDown['ArrowRight']
   });
 
