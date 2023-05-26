@@ -59,6 +59,14 @@ https://demi-game-galaga.netlify.app/
     
     ![image](https://github.com/Yeonji-Noob/demi_game_galaga/assets/121682565/65b66c85-7a0b-41c0-b2af-641d9ec5a095)
 
+### <2023-05-26>
+
+#### :round_pushpin:v2.0.5
+- meta 태그 추가 (썸네일, 제목, 내용 업데이트)
+  
+  ![image 14](https://github.com/Yeonji-Noob/demi_game_galaga/assets/121682565/ed4b7163-5c16-4691-9d95-7f178259d4e7)
+
+
 
 <br/>
 
@@ -75,4 +83,5 @@ https://demi-game-galaga.netlify.app/
 <p>
 <img src="https://img.shields.io/badge/VScode-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white"/>
 <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white"/>
+<img src="https://img.shields.io/badge/canva-00C4CC?style=for-the-badge&logo=canva&logoColor=white"/>
 </p>
